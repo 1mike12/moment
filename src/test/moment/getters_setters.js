@@ -13,6 +13,7 @@ test('getters', function (assert) {
     assert.equal(a.minutes(), 7, 'minute');
     assert.equal(a.seconds(), 8, 'second');
     assert.equal(a.milliseconds(), 9, 'milliseconds');
+    assert.deepEqual(a.timeParams(), {milliseconds: 9, seconds: 8, minutes: 7, hours: 6}, 'timeParams')
 });
 
 test('getters programmatic', function (assert) {

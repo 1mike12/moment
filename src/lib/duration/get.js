@@ -20,6 +20,15 @@ export var days         = makeGetter('days');
 export var months       = makeGetter('months');
 export var years        = makeGetter('years');
 
+export function timeParams () {
+    return {
+        milliseconds : this.milliseconds(),
+        seconds: this.seconds(),
+        minutes: this.minutes(),
+        hours: this.hours()
+    }
+}
+
 export function weeks () {
     return absFloor(this.days() / 7);
 }
